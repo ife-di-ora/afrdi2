@@ -1,0 +1,289 @@
+<!-- home_app/templates/home_app/home.html -->
+{% extends 'home_app/base.html' %} {% load static %} {% block title %} AFRDC -
+Home {% endblock %} {% block content %}
+
+<div
+  class="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden"
+  style="font-family: 'Space Grotesk', 'Noto Sans', sans-serif"
+>
+  <div class="layout-container flex h-full grow flex-col">
+    <div class="flex flex-1 justify-center py-5">
+      <div
+        class="layout-content-container flex flex-col max-w-full flex-1 gap-10"
+      >
+        <section class="@container">
+          <div class="@[480px]:p-4">
+            <div
+              class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-start justify-end px-4 pb-10"
+              style="
+                background-image: linear-gradient(
+                    rgba(0, 0, 0, 0.1) 0%,
+                    rgba(0, 0, 0, 0.4) 100%
+                  ),
+                  url('{% static 'home_app/assets/images/afrdc_blur.png'%}');
+              "
+            >
+              <div class="flex flex-col gap-2 text-left">
+                <h1
+                  class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]"
+                >
+                  Advancing NAF Research & Development
+                </h1>
+                <h2
+                  class="text-white text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal"
+                >
+                  Driving innovation in aerospace, propulsion, and materials for
+                  national defense.
+                </h2>
+              </div>
+              <button
+                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#156fcf] text-white text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]"
+              >
+                <span class="truncate">Explore Research</span>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Second Section -->
+        <section class="flex flex-col md:flex-row px-4 gap-8">
+          <div class="max-w-full md:max-w-[60vw]">
+            <h2
+              class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] pb-3 pt-5"
+            >
+              Our Mission
+            </h2>
+            <p
+              class="text-[#111418] text-base/8 font-normal pb-3 pt-1 text-justify"
+            >
+              To conduct cutting-edge research and development in aerospace
+              technologies, ensuring the Air Force maintains its technological
+              superiority. We focus on innovation in propulsion systems,
+              advanced materials, and aerospace engineering to meet future
+              defense challenges. Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Facilis vel, placeat sint reprehenderit
+              praesentium cumque dolores eveniet amet veritatis provident odit
+              dignissimos dicta, voluptatibus ut, impedit dolorum nostrum ipsa
+              iste.
+            </p>
+            <h2
+              class="text-[#111418] text-[22px] font-bold tracking-[-0.015em] pb-3 pt-5"
+            >
+              Our Vision
+            </h2>
+            <p
+              class="text-[#111418] text-base/8 font-normal pb-3 pt-1 text-justify"
+            >
+              To be the premier aerospace research and development institute,
+              recognized globally for our contributions to national security and
+              technological advancement. Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Odio quia repellendus similique iste velit?
+              Facere cumque rem suscipit alias reprehenderit minus ipsa. Quos
+              laborum quas impedit amet labore, laboriosam dolorem!
+            </p>
+
+            <p class="text-[#637588] text-sm font-normal leading-normal p-4">
+              Our commitment to excellence in research and development is
+              unwavering. We strive to push the boundaries of aerospace
+              technology, ensuring our forces have the best tools to protect our
+              nation.
+            </p>
+          </div>
+          <div>
+            <div class="w-full aspect-video rounded-xl flex-1">
+              <img
+                src="{% static 'home_app/assets/images/DG_Afrdi.jpg' %}"
+                alt=""
+              />
+            </div>
+          </div>
+        </section>
+        <h2
+          class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5"
+        >
+          Featured Research
+        </h2>
+        <div
+          class="flex overflow-y-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden"
+        >
+          <div class="flex items-stretch p-4 gap-3">
+            <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60">
+              <div
+                class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl flex flex-col"
+                style="
+                  background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuArMlpDUSo8oiVM8-3G22FZpME7cRlY0wr-h6VI8w2_66_cgJxejUTJ41LrvDbMOGevjYMlz0-i0g-yr1SRfu3pSF0jAG3_-jX4MQNbkfPoPsXj-6SggVfLjKZS-DpWStamX1xyKJJGlaNrb4YvNnXoikcSs4WKpJ6BlqrLa3rWZ4LW4pQO0LGCzQiUm7PCFJR7imKGcqukgvx9ZKcWCiT1qYkyHvWvijNextGM2SyvpfCe7onG2lLAEOexSjjXjl7x6k62_SU23lM');
+                "
+              ></div>
+              <div>
+                <p class="text-[#111418] text-base font-medium leading-normal">
+                  Next-Gen Aircraft Design
+                </p>
+                <p class="text-[#637588] text-sm font-normal leading-normal">
+                  Developing the next generation of aircraft with enhanced
+                  capabilities.
+                </p>
+              </div>
+            </div>
+            <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60">
+              <div
+                class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl flex flex-col"
+                style="
+                  background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD2XWWNvk2qkv8KU1IK1aVGDR-JuRt_dawVjEWHcLb3UsSPMH270X9sV0H7kj-EA6UkiKaTI7I6zvNRNqTnTR-iAo_eLRnQPi1E7RB7bjbNxKBjh0X3E-NjwXG99faE-hrQdVOhY1SZ-6du5I9ELXzXh1qee9ai23Ncs0FxLICd7O4yVQuInH5mtTWre2sR5mWLJFqtcnE3NWH0O9gd_beszBfBSIZLz8hDk14IpFZBQpICaZ3d6guv2YemvfP8-PIP5Uu5XXZmBqI');
+                "
+              ></div>
+              <div>
+                <p class="text-[#111418] text-base font-medium leading-normal">
+                  Revolutionary Propulsion Systems
+                </p>
+                <p class="text-[#637588] text-sm font-normal leading-normal">
+                  Innovating propulsion technologies for greater efficiency and
+                  performance.
+                </p>
+              </div>
+            </div>
+            <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60">
+              <div
+                class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl flex flex-col"
+                style="
+                  background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDFk3KTGP_YKFsNRycPSFIt6TcVN3U8ajKxJWTpUaO4NG8rQ94EKZwiPrB83ASmW3-Rre_2qLmni6i2WLutNLYiZqRWsfXtFCF5cQt95xeBsHYooytEFlGUqQfivge29MG25LIz-vzXZQntTa417E5rFlQkoRxAZQmxrlV1_T15dwOjOpn1nb8ZBWmg2nrEn3BA9CocjHA8jybxnqbcMNnnQY-fFMHNs4y45C3_WQ-d1wycHwXq7uMFJ9k8nXTvPrWZos9LlQ30KF4');
+                "
+              ></div>
+              <div>
+                <p class="text-[#111418] text-base font-medium leading-normal">
+                  Advanced Materials Research
+                </p>
+                <p class="text-[#637588] text-sm font-normal leading-normal">
+                  Creating advanced materials for aerospace applications.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h2
+          class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5"
+        >
+          Meet Our Team
+        </h2>
+        <div
+          class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4"
+        >
+          <div class="flex flex-col gap-3 text-center pb-3">
+            <div class="px-4">
+              <div
+                class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
+                style="
+                  background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuATkHBrc9fMTrzFgmpUbIH2ywbqUV6tkBNG5J27loTxt8KLyu0_jw8uUBx88irCLj_WHXafG1gwBZ96ga61Iob4RMBM6ZRZemU250cwkIZhKfrs0DmXefXQslL7XKCtEH5ozhCJuxPpJcSRkYcNGHXF0TqOWNuWWB_l_DyJ-iovlZddwh_SgWYaj2DF-3cjfdvma3o2NOSe_Y4xopA7g4OhlFNVt4nbUbsdHsJ8UuohYMEpbMGkt7cb2sQP5E1uxaifnBRFSIWEJlg');
+                "
+              ></div>
+            </div>
+            <div>
+              <p class="text-[#111418] text-base font-medium leading-normal">
+                Dr. Sophia Bennett
+              </p>
+              <p class="text-[#637588] text-sm font-normal leading-normal">
+                Chief Scientist
+              </p>
+            </div>
+          </div>
+          <div class="flex flex-col gap-3 text-center pb-3">
+            <div class="px-4">
+              <div
+                class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
+                style="
+                  background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAUMye5hZP5d8xwYhjXtX_AS8voC069oBWMpSQHBLIbnGR2Jbw7D20VuyPU34unAPDWwq_67w24tHPOMnHqWH7j1cawdR2WDTLe69C1lXRcNtJJfcikvrScxhAQz4Q_nw5IDQSQaV3XZr0E9wcml-oiQl56aQGwkAg3LWnA23Xnr78XnD_Boa9a__HUbBIqT-EyjgbGh6j_ZfTE9Ls4eObqKk68nmqqQUUX3qhEBVLwYljCXmrc75COnY6vvQ1O9-tJUkSRvU53B7o');
+                "
+              ></div>
+            </div>
+            <div>
+              <p class="text-[#111418] text-base font-medium leading-normal">
+                Dr. Owen Carter
+              </p>
+              <p class="text-[#637588] text-sm font-normal leading-normal">
+                Head of Propulsion Research
+              </p>
+            </div>
+          </div>
+          <div class="flex flex-col gap-3 text-center pb-3">
+            <div class="px-4">
+              <div
+                class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
+                style="
+                  background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBEEQXQb905E_J--cAy1ijGowms8yW8CcJaQxrChb4jA2UnKFG4pgD30SYJwaCObGlMyWd50r8CwpJB58nBGEGpj1kb2_XPo9L9v-yMd-Ps5rsPpcPV4wSa-7lNNhz6EqGKRM-NkglAT1GXu3LKB2-S15Xf4FKiNLHDGSPRX8h7_uem448s7rt66D1YEOGX1Gg1pkxfBN8V35XIhFRRON4nDnolTvTL8RjNJ93H61sQF8INQ4OzyHhivzUjLYW1ue23vdmo-vdxU6o');
+                "
+              ></div>
+            </div>
+            <div>
+              <p class="text-[#111418] text-base font-medium leading-normal">
+                Dr. Lily Zhang
+              </p>
+              <p class="text-[#637588] text-sm font-normal leading-normal">
+                Lead Materials Engineer
+              </p>
+            </div>
+          </div>
+        </div>
+        <h2
+          class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5"
+        >
+          Latest News
+        </h2>
+        <div class="p-4">
+          <div class="flex items-stretch justify-between gap-4 rounded-xl">
+            <div class="flex flex-col gap-1 flex-[2_2_0px]">
+              <p class="text-[#637588] text-sm font-normal leading-normal">
+                Research Breakthrough
+              </p>
+              <p class="text-[#111418] text-base font-bold leading-tight">
+                New Propulsion System Achieves Record Efficiency
+              </p>
+              <p class="text-[#637588] text-sm font-normal leading-normal">
+                Our team has developed a new propulsion system that
+                significantly improves fuel efficiency and performance.
+              </p>
+            </div>
+            <div
+              class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl flex-1"
+              style="
+                background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC5M1uKnRaSbzUjhzpmKPjynpAe_8xoPlQPIX88axB1dC7HlpVX4Pz6obERxANTA9FV9IG5kPeahMbhJc4qnvghc_8D0ywOkMd2F9iN0iUx6-9VKC2WRUNtG_bVom260SJrYRJuXIK2_UseAD2Rbb7KLVtWVKq-7tnOkRW-OLz7y_duoa7bdXYV5gJUtDT3pj7_GJEfl4Q69QtgEql3zZjS3LK0UcvbuD80gngGqz8JZnKbIppTN5Qhr_MJNxJ7ILRAKHB7DCEGHWg');
+              "
+            ></div>
+          </div>
+        </div>
+        <div class="p-4">
+          <div class="flex items-stretch justify-between gap-4 rounded-xl">
+            <div class="flex flex-col gap-1 flex-[2_2_0px]">
+              <p class="text-[#637588] text-sm font-normal leading-normal">
+                Institute News
+              </p>
+              <p class="text-[#111418] text-base font-bold leading-tight">
+                Air Force R&amp;D Institute Announces New Partnership
+              </p>
+              <p class="text-[#637588] text-sm font-normal leading-normal">
+                We are excited to announce a new partnership with leading
+                universities to advance aerospace research.
+              </p>
+            </div>
+            <div
+              class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl flex-1"
+              style="
+                background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAjilVudHJDq4UeClnrgQcy_EBXya-hjmHbRPUsSrR7jgFbD3ELKdrBP0sDlyQ9gW8B99ZChOBEfxITarWUiof8REBrM99d-DzD-TEMqjSqAR9MnOBrNGNzyQnA1GqKsNxg9XB4GXQrOGx6JAnrfPM0CTLoA6-rzww7nrJICcyh5TXQTrre7MzmIY95Ooni_-zWszyJAWT4AiGqIYVF1pSwffigganqbHsAU2TNQtw-9gx9mZfp3gth7CKLLZcq0y3DRqszo4u-gQE');
+              "
+            ></div>
+          </div>
+        </div>
+        <div class="flex px-4 py-3 justify-center">
+          <button
+            class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#f0f2f4] text-[#111418] text-sm font-bold leading-normal tracking-[0.015em]"
+          >
+            <span class="truncate">View All News</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 
+<h1 class="text-3xl font-bold text-gray-800 mb-4">Welcome to the Home Page</h1>
+<p class="text-gray-700 leading-relaxed">This is the home page content.</p> -->
+{% endblock %}

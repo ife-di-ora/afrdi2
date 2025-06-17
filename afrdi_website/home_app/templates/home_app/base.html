@@ -1,0 +1,219 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}{% endblock %}</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="{% static 'home_app/assets/images/afrdi_logo.png' %}"
+    />
+    <script src="{% static 'home_app/assets/css/tailwind.js' %}"></script>
+    <style>
+      body {
+        padding-top: 4.5rem; /* Adjust based on navbar height */
+      }
+    </style>
+  </head>
+  <body class="text-gray-800">
+    <!-- Fixed Navbar -->
+    <nav
+      class="bg-white border-b border-gray-200 px-4 py-3 md:px-8 shadow-md fixed top-0 left-0 w-full z-50"
+    >
+      <div class="flex flex-wrap items-center justify-between mx-auto">
+        <a href="{% url 'index' %}" class="flex font-bold text-xl">
+          <div class="size-">
+            <img
+              src="{% static 'home_app/assets/images/afrdi_jet.png' %}"
+              alt=""
+              class="w-72 lg:w-96 "
+            />
+          </div>
+          <!-- <h2
+            class="text-[#111418] text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pl-12"
+          >
+            AFRDI
+          </h2> -->
+        </a>
+
+        <button
+          type="button"
+          class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100"
+          aria-controls="navbar-default"
+          aria-expanded="false"
+          onclick="document.getElementById('nav-links').classList.toggle('hidden')"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </button>
+
+        <div class="hidden lg:block lg:w-auto" id="nav-links">
+          <ul
+            class="flex flex-col mt-4 font-medium md:flex-row md:space-x-4 md:mt-0"
+          >
+            <li>
+              <a
+                href="{% url 'index' %}"
+                class="block py-2 pl-3 pr-4 text-gray-700 hover:text-blue-600"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="{% url 'news' %}"
+                class="block py-2 pl-3 pr-4 text-gray-700 hover:text-blue-600"
+                >News</a
+              >
+            </li>
+            <li>
+              <a
+                href="{% url 'publications' %}"
+                class="block py-2 pl-3 pr-4 text-gray-700 hover:text-blue-600"
+                >Publications</a
+              >
+            </li>
+            <li>
+              <a
+                href="{% url 'research' %}"
+                class="block py-2 pl-3 pr-4 text-gray-700 hover:text-blue-600"
+                >Research</a
+              >
+            </li>
+            <li>
+              <a
+                href="{% url 'about' %}"
+                class="block py-2 pl-3 pr-4 text-gray-700 hover:text-blue-600"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="{% url 'contact us' %}"
+                class="block py-2 pl-3 pr-4 text-gray-700 hover:text-blue-600"
+                >Contact</a
+              >
+            </li>
+            <li>
+              <button
+                class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 bg-transparent text-[#111418] gap-2 text-base font-bold leading-normal tracking-[0.015em] min-w-0 p-0"
+              >
+                <div
+                  class="text-[#111418]"
+                  data-icon="MagnifyingGlass"
+                  data-size="24px"
+                  data-weight="regular"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24px"
+                    height="24px"
+                    fill="currentColor"
+                    viewBox="0 0 256 256"
+                  >
+                    <path
+                      d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"
+                    ></path>
+                  </svg>
+                </div>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <main class="px-4 md:px-8">
+      {% block content %}
+      <!-- Child templates will inject content here -->
+      {% endblock %}
+    </main>
+
+     
+<footer class="bg-gray-900 text-gray-100 pt-12 pb-6 mt-10 border-t border-gray-800 px-4">
+  <div class="max-w-full mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Contact Info -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4 text-blue-400">Connect with Us</h3>
+        <p class="mb-2">AFRDI, Osogbo, Nigeria</p>
+        <p class="mb-2">
+          <span class="font-semibold">Telephone:</span><br>
+          xxxxxxxxxx / 081xxxxxx<br>
+          
+        </p>
+        <p class="mb-2">
+          <span class="font-semibold">Email:</span><br>
+          <a href="mailto:info@afrdi.edu.ng" class="hover:underline text-blue-300">afrdi@airforce.mil.ng</a>
+        </p>
+        <div class="flex space-x-4 mt-4">
+          <a href="https://facebook.com/afrdi" target="_blank" aria-label="Facebook" class="hover:text-blue-500">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M22 12c0-5.522-4.477-10-10-10S2 6.478 2 12c0 5.006 3.676 9.128 8.438 9.877v-6.987h-2.54v-2.89h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.242 0-1.63.771-1.63 1.562v1.875h2.773l-.443 2.89h-2.33V21.88C18.324 21.128 22 17.006 22 12"></path></svg>
+          </a>
+          <a href="https://x.com/afrdi" target="_blank" aria-label="X" class="hover:text-blue-400"></a>
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M22.46 5.924c-.793.352-1.645.59-2.54.698a4.48 4.48 0 0 0 1.963-2.475 8.94 8.94 0 0 1-2.828 1.082A4.48 4.48 0 0 0 11.07 9.03c0 .352.04.697.116 1.025C7.728 9.89 4.1 8.13 1.67 5.149a4.48 4.48 0 0 0-.607 2.255c0 1.555.792 2.927 2.002 3.732a4.48 4.48 0 0 1-2.03-.561v.057a4.48 4.48 0 0 0 3.6 4.396c-.193.052-.397.08-.607.08-.148 0-.292-.014-.432-.04a4.48 4.48 0 0 0 4.184 3.11A8.98 8.98 0 0 1 2 19.54a12.68 12.68 0 0 0 6.88 2.018c8.26 0 12.78-6.84 12.78-12.78 0-.195-.004-.39-.013-.583A9.14 9.14 0 0 0 24 4.59a8.93 8.93 0 0 1-2.54.698z"></path></svg>
+          </a>
+          <a href="mailto:afrdi@airforce.mil.ng" aria-label="Email" class="hover:text-yellow-400">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 2v.01L12 13 4 6.01V6h16zm-16 12V8.99l7.99 6.99c.39.34.99.34 1.38 0L20 8.99V18H4z"></path></svg>
+          </a>
+        </div>
+      </div>
+      <!-- Quick Links -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4 text-blue-400">Quick Links</h3>
+        <ul class="space-y-2">
+          <li>About AFRDI</li>
+          <li>Publications</li>
+          <li>Research</li>
+          <li>News</li>
+        </ul>
+      </div>
+      
+      <!-- Video -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4 text-blue-400">About AFRDI</h3>
+        <p class="mb-4">AFRDI is committed to excellence in research, innovation, and education for national development.</p>
+        <div class="rounded overflow-hidden shadow-lg">
+          <video class="w-full h-32 object-cover" controls poster="{% static 'home_app/assets/images/afrdi_logo.png' %}">
+            <source src="https://nil.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-gray-800 mt-10 pt-6 flex flex-col md:flex-row items-center justify-around text-sm text-gray-400">
+      <div class="mb-2 md:mb-0 text-center">
+        &copy; {{ year|default:"2025" }} Air Force Research and Development Institute (AFRDI), Osogbo. All Rights Reserved.<br> <br>
+        Designed by NAF SDT
+      </div>
+      
+      <div class="text-center md:text-right mt-4">
+        Privacy Policy
+        <span class="mx-2">|</span>
+       Contact
+      </div>
+    </div>
+  </div>
+</footer>
+
+  </body>
+</html>
+
+
+
+
+
