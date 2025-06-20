@@ -6,7 +6,7 @@ class News(models.Model):
     title = models.CharField(max_length = 300)
     pub_date = models.DateTimeField ('date published')
     text = models.CharField(max_length = 5000)
-    pic = models.ImageField(upload_to="news_image")
+    image = models.ImageField(upload_to="news_images")
 
     def __str__(self):
         return self.title
@@ -46,13 +46,24 @@ class Vision(models.Model):
 class HomeCarousel(models.Model):
     title = models.CharField(max_length=200)
     caption = models.CharField(max_length=200)
-    image = models.ImageField(upload_to="media")
+    image = models.ImageField(upload_to="carousel_images")
 
 class Research (models.Model):
     title = models.CharField(max_length = 300)
     description = models.CharField(max_length = 1000)
+    image = models.ImageField(upload_to='news_images')
+    pub_date = models.DateTimeField ('date published')
+
     
     def __str__(self):
         return self.title
     
 
+class Staff (models.Model):
+    name = models.CharField(max_length=50)
+    profile = models.CharField(max_length=1000)
+    appointment = models.CharField(max_length=50)
+    image = models.ImageField(upload_to="staff_images")
+
+    def __str__(self):
+        return self.name

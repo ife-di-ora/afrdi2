@@ -51,42 +51,39 @@ Home {% endblock %} {% block content %}
             <h2
               class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] pb-3 pt-5"
             >
-              Our Mission
+              <i class="fa fa-bullseye pe-4"></i>Our Mission
             </h2>
             <p
               class="text-[#111418] text-base/8 font-normal pb-3 pt-1 text-justify"
             >
-              To conduct cutting-edge research and development in aerospace
-              technologies, ensuring the Air Force maintains its technological
-              superiority. We focus on innovation in propulsion systems,
-              advanced materials, and aerospace engineering to meet future
-              defense challenges. Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Facilis vel, placeat sint reprehenderit
-              praesentium cumque dolores eveniet amet veritatis provident odit
-              dignissimos dicta, voluptatibus ut, impedit dolorum nostrum ipsa
-              iste.
+              {{mission.text}}
             </p>
             <h2
               class="text-[#111418] text-[22px] font-bold tracking-[-0.015em] pb-3 pt-5"
             >
-              Our Vision
+              <i class="fa-solid fa-eye pe-4"></i> Vision
             </h2>
             <p
               class="text-[#111418] text-base/8 font-normal pb-3 pt-1 text-justify"
             >
-              To be the premier aerospace research and development institute,
-              recognized globally for our contributions to national security and
-              technological advancement. Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Odio quia repellendus similique iste velit?
-              Facere cumque rem suscipit alias reprehenderit minus ipsa. Quos
-              laborum quas impedit amet labore, laboriosam dolorem!
+              {{vision.text}}
             </p>
 
-            <p class="text-[#637588] text-sm font-normal leading-normal p-4">
-              Our commitment to excellence in research and development is
-              unwavering. We strive to push the boundaries of aerospace
-              technology, ensuring our forces have the best tools to protect our
-              nation.
+            <p
+              class="text-[#637588] text-sm font-normal leading-normal py-6 lg:ps-96 text-center"
+            >
+              <i class="fa-solid fa-quote-left"></i> Our commitment to
+              excellence in research and development is unwavering. We strive to
+              push the boundaries of aerospace technology, ensuring our forces
+              have the best tools to protect our nation
+              <i class="fa-solid fa-quote-right"></i><br />
+              <br /><a
+                class="text-blue-600 after:content-['_↗']"
+                href="/about#dg"
+                class="text-right"
+              >
+                ~ AVM PO Oahimere - DG AFRDI
+              </a>
             </p>
           </div>
           <div>
@@ -103,60 +100,34 @@ Home {% endblock %} {% block content %}
         >
           Featured Research
         </h2>
-        <div
-          class="flex overflow-y-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden"
-        >
-          <div class="flex items-stretch p-4 gap-3">
+        <div>
+          <div
+            class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 p-4 gap-12"
+          >
+            {% for research in research %}
             <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60">
               <div
                 class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl flex flex-col"
-                style="
-                  background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuArMlpDUSo8oiVM8-3G22FZpME7cRlY0wr-h6VI8w2_66_cgJxejUTJ41LrvDbMOGevjYMlz0-i0g-yr1SRfu3pSF0jAG3_-jX4MQNbkfPoPsXj-6SggVfLjKZS-DpWStamX1xyKJJGlaNrb4YvNnXoikcSs4WKpJ6BlqrLa3rWZ4LW4pQO0LGCzQiUm7PCFJR7imKGcqukgvx9ZKcWCiT1qYkyHvWvijNextGM2SyvpfCe7onG2lLAEOexSjjXjl7x6k62_SU23lM');
-                "
+                style="background-image: url({{research.image.url}})"
               ></div>
               <div>
                 <p class="text-[#111418] text-base font-medium leading-normal">
-                  Next-Gen Aircraft Design
+                  {{research.title}}
                 </p>
-                <p class="text-[#637588] text-sm font-normal leading-normal">
-                  Developing the next generation of aircraft with enhanced
-                  capabilities.
+                <p
+                  class="text-[#637588] text-sm font-normal leading-normal line-clamp-5"
+                >
+                  {{research.description}}
                 </p>
+                <a
+                  href="{% url 'research' research.id %}"
+                  class="text-blue-900 text-sm font-medium cursor-pointer"
+                >
+                  Read more
+                </a>
               </div>
             </div>
-            <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60">
-              <div
-                class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl flex flex-col"
-                style="
-                  background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD2XWWNvk2qkv8KU1IK1aVGDR-JuRt_dawVjEWHcLb3UsSPMH270X9sV0H7kj-EA6UkiKaTI7I6zvNRNqTnTR-iAo_eLRnQPi1E7RB7bjbNxKBjh0X3E-NjwXG99faE-hrQdVOhY1SZ-6du5I9ELXzXh1qee9ai23Ncs0FxLICd7O4yVQuInH5mtTWre2sR5mWLJFqtcnE3NWH0O9gd_beszBfBSIZLz8hDk14IpFZBQpICaZ3d6guv2YemvfP8-PIP5Uu5XXZmBqI');
-                "
-              ></div>
-              <div>
-                <p class="text-[#111418] text-base font-medium leading-normal">
-                  Revolutionary Propulsion Systems
-                </p>
-                <p class="text-[#637588] text-sm font-normal leading-normal">
-                  Innovating propulsion technologies for greater efficiency and
-                  performance.
-                </p>
-              </div>
-            </div>
-            <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60">
-              <div
-                class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl flex flex-col"
-                style="
-                  background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDFk3KTGP_YKFsNRycPSFIt6TcVN3U8ajKxJWTpUaO4NG8rQ94EKZwiPrB83ASmW3-Rre_2qLmni6i2WLutNLYiZqRWsfXtFCF5cQt95xeBsHYooytEFlGUqQfivge29MG25LIz-vzXZQntTa417E5rFlQkoRxAZQmxrlV1_T15dwOjOpn1nb8ZBWmg2nrEn3BA9CocjHA8jybxnqbcMNnnQY-fFMHNs4y45C3_WQ-d1wycHwXq7uMFJ9k8nXTvPrWZos9LlQ30KF4');
-                "
-              ></div>
-              <div>
-                <p class="text-[#111418] text-base font-medium leading-normal">
-                  Advanced Materials Research
-                </p>
-                <p class="text-[#637588] text-sm font-normal leading-normal">
-                  Creating advanced materials for aerospace applications.
-                </p>
-              </div>
-            </div>
+            {% endfor %}
           </div>
         </div>
         <h2
